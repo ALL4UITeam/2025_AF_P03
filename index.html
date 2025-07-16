@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,99 +28,170 @@
     <script src="./lib/gsap/ScrollTrigger.min.js"></script>
     <script src="./lib/gsap/ScrollToPlugin.min.js"></script>
     <script src="./lib/gsap/ScrollSmoother.js"></script>  <script type="module" src="./assets/js/modulepreload-polyfill.js"></script>
-  <script type="module" src="./assets/js/index2.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
+
 <body>
-    <div id="wrap">
-        <header class="header">
-            <div class="header-container">
-                <h1 class="logo"><a href="/" title="홈 바로가기"></a></h1>
-                <nav id="nav">
-                    <ul id="gnb" class="gnb">
-                        <li class="gnb-lv1"><a href="#" class="current">지도로 보는 무인도서</a>
-                            <div class="gnb-submenu"></div>
-                        </li>
-                        <li class="gnb-lv1"><a href="#">무인도서 안내</a>
-                            <div class="gnb-submenu">
-                                <ul class="gnb-submenu-list">
-                                    <li class="gnb-submenu-item"><a href="#">무인도서 정의</a></li>
-                                    <li class="gnb-submenu-item"><a href="#">무인도서 현황</a></li>
-                                    <li class="gnb-submenu-item"><a href="#">무인도서 이용방법</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="gnb-lv1"><a href="#">무인도서 자료실</a>
-                            <div class="gnb-submenu">
-                                <ul class="gnb-submenu-list">
-                                    <li class="gnb-submenu-item"><a href="#">무인도서 통계</a></li>
-                                    <li class="gnb-submenu-item"><a href="#">무인도서 OpenAPI</a></li>
-                                    <li class="gnb-submenu-item"><a href="#">무인도서 홍보</a></li>
-                                </ul>
-                            </div>
+    <style>
+        table{
+            border-collapse: collapse;
+            background: white;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+        }
+        table thead tr{    height: 60px;background: #36304a;}
+        table thead th{
+            text-align: center;
+            font-family: OpenSans-Regular;
+            font-size: 18px;
+            color: #fff;
+            line-height: 1.2;
+            font-weight: unset;
+        }
+        table tbody tr {
+            height: 50px;
+        }
+        table td, table th {
+            text-align: center;
+            padding: 0 10px;
+            white-space: nowrap;
+        }
+        tbody tr:hover {
+            color: #555555;
+            background-color: #f5f5f5;
+            cursor: pointer;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
         
-                        </li>
-                        <li class="gnb-lv1"><a href="#">무인도서 커뮤니티</a>
-                            <div class="gnb-submenu">
-                                <ul class="gnb-submenu-list">
-                                    <li class="gnb-submenu-item"><a href="#">공지사항</a></li>
-                                    <li class="gnb-submenu-item"><a href="#">FAQ</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header-right">
-                    <button type="button" class="mobile-btn-menu" title="메뉴 열기">
-                        <span class="mobile-btn-menu__line">
-                            <span class="line"></span>
-                            <span class="line"></span>
-                            <span class="line"></span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div class="header-bg"></div>
-        </header>        
-        <footer id="footer" class="footer">
-            <div class="footer-link">
-                <div class="container">
-                    <a href="#" target="_blank" class="link" title="새창 열림">
-                        <span>토지이음 홈페이지</span>
-                        <i class="ico-blank"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-content">
-                <div class="container">
-                    <h2 class="logo">
-                        <span class="visually-hidden">해양수산부</span>
-                    </h2>
-                    <div class="ft-info">
-                        <div class="addr">(30110) 세종특별자치시 다솜2로 94(어진동) 정부세종청사 5동 해양수산부 </div>
-                        <div class="tel">
-                            <strong>대표전화</strong>
-                            <span><a href="tel:044-200-5355">044-200-5355</a> (해양수산부 해양영토과)</span>
-                        </div>
-                        <div class="mail">
-                            <strong>시스템 관련문의</strong>
-                            <span><a href="mailto:kjk@korea.kr">kjk@korea.kr</a></span>
-                        </div>
-                    </div>
-        
-                    <div class="ft-links">
-                        <div class="ft-links-inner">
-                            <a href="#" target="_blank" class="bold">개인정보처리방침</a>
-                            <a href="#" target="_blank" class="bold">이메일무단수집거부</a>
-                            <a href="#" target="_blank" class="bold">저작권보호 및 정책</a>
-                        </div>
-                        <div class="copyright">
-                            <p> Ministry of the Oceans and Fisheries. All rights reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>    </div>
+        .link-page{
+            margin: 0 auto;
+            width: 1400px;
+        }
+        h1{
+            padding-bottom: 2rem;
+            text-align: center;
+        }
+        .search-box {
+            width: 100%;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .search-box input {
+            padding: 0.8rem 1rem;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1.4rem;
+        }
+        .search-box button {
+            margin-left: 1rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #36304a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.6rem;
+            color: #555;
+            display: none;
+        }
+    </style>
+    <h1>화면목록</h1>
     
+    <div class="link-page">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+            <button id="searchButton">검색</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>파일</th>
+                    <th>페이지명</th>
+                    <th>생성일</th>
+                    <th>수정일</th>
+                    <th>비고</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td><a href="./guide.html" target="_blank">guide.html</a></td>
+                    <td>가이드</td>
+                    <td>2025-07-09</td>
+                    <td>2025-07-09</td>
+                    <td>가이드 구성</td>
+                </tr>
+                <tr>
+                    <td><a href="./layout.html" target="_blank">layout.html</a></td>
+                    <td>layout</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./map.html" target="_blank">map.html</a></td>
+                    <td>map</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./무인도서안내_무인도서현황.html" target="_blank">무인도서안내_무인도서현황.html</a></td>
+                    <td>무인도서안내-무인도서 현황</td>
+                    <td>2025-07-16</td>
+                    <td>2025-07-16</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="no-results" id="noResults">검색 결과가 없습니다.</div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchButton = document.getElementById('searchButton');
+            const tableBody = document.getElementById('tableBody');
+            const noResults = document.getElementById('noResults');
+            const rows = tableBody.querySelectorAll('tr');
+            
+            function performSearch() {
+                const searchTerm = searchInput.value.toLowerCase();
+                let resultsFound = false;
+                
+                rows.forEach(row => {
+                    const text = row.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        row.style.display = '';
+                        resultsFound = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+                
+                if (resultsFound) {
+                    noResults.style.display = 'none';
+                } else {
+                    noResults.style.display = 'block';
+                }
+            }
+            
+            searchButton.addEventListener('click', performSearch);
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
