@@ -754,6 +754,7 @@ em {
     flex-shrink: 0;
     width: clamp(140px, 20vw, 250px);
     font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+    white-space: nowrap;
   }
   #nav .gnb .gnb-lv1 .gnb-submenu {
     flex-grow: 1;
@@ -1141,11 +1142,13 @@ body {
   position: relative;
 }
 
-[data-page=islands-status] .sublayout__title._white {
-  color: #000;
-}
-[data-page=islands-status] .sublayout__title._white span::after {
-  background-color: var(--color-primary);
+@media (max-width: 1024px) {
+  [data-page=islands-status] .sublayout__title._white {
+    color: #000;
+  }
+  [data-page=islands-status] .sublayout__title._white span::after {
+    background-color: var(--color-primary);
+  }
 }
 
 .islands-status-grid {

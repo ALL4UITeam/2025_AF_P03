@@ -754,6 +754,7 @@ em {
     flex-shrink: 0;
     width: clamp(140px, 20vw, 250px);
     font-size: clamp(1.6rem, 2.5vw, 1.8rem);
+    white-space: nowrap;
   }
   #nav .gnb .gnb-lv1 .gnb-submenu {
     flex-grow: 1;
