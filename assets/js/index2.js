@@ -1,4 +1,16 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
+ScrollSmoother.create({
+  wrapper: "#smoother-wrapper",
+  content: "#smoother-content",
+  smooth: 2,
+  speed: 1,
+  normalizeScroll: true,
+  ignoreMobileResize: true,
+  smoothTouch: 0.1,
+  effects: true,
+  preventDefault: true,
+  normalizeScroll: { allowNestedScroll: true }
+});
 const nav = document.querySelector("#nav");
 const toggleBtn = document.querySelector(".mobile-btn-menu");
 const depth1Buttons = document.querySelectorAll(".gnb-lv1 > a");
@@ -57,18 +69,6 @@ window.addEventListener("resize", () => {
     });
   }
 });
-ScrollSmoother.create({
-  wrapper: "#smoother-wrapper",
-  content: "#smoother-content",
-  smooth: 2,
-  speed: 1,
-  normalizeScroll: true,
-  ignoreMobileResize: true,
-  smoothTouch: 0.1,
-  effects: true,
-  preventDefault: true,
-  normalizeScroll: { allowNestedScroll: true }
-});
 const sublayout__breadcrumb = document.querySelector(".sublayout__breadcrumb");
 const sublayout__page = document.querySelector(".sublayout__page");
 const sublayout__desc = document.querySelector(".sublayout__desc");
@@ -107,7 +107,4 @@ sublayoutTimeline.to(".sublayout__breadcrumb", {
   duration: 1
 }, ">");
 window.addEventListener("resize", () => {
-  ScrollSmoother.update();
-  ScrollSmoother.refresh();
-  ScrollTrigger.refresh();
 });

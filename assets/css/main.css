@@ -205,6 +205,15 @@ em {
   max-width: var(--container-xl);
 }
 
+.md-block {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .md-block {
+    display: block;
+  }
+}
+
 .svg-icon {
   forced-color-adjust: none;
   -webkit-mask-repeat: no-repeat;
@@ -512,6 +521,57 @@ em {
 
 .marker-14 {
   background-image: url("../images/marker-14.png");
+}
+
+.icon-download,
+.icon-arrow-right {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.icon-download {
+  background-image: url("../images/ico-download.png");
+  width: 1.8rem;
+  height: 1.5rem;
+}
+
+.icon-arrow-right {
+  background-image: url("../images/ico-arrow-right.png");
+  width: 0.9rem;
+  height: 1.4rem;
+}
+
+.btn {
+  display: inline-flex;
+  border: 1px solid #1d1d1d;
+  color: #1d1d1d;
+  background-color: #fff;
+  transition: all 0.3s;
+  opacity: 1;
+  padding: 1rem 1.6rem;
+  border-radius: 0.6rem;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.btn:has(i) {
+  gap: 0 1rem;
+}
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.7rem 1rem;
+    gap: 0 0.5rem;
+  }
+  .btn i {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-size: cover;
+  }
 }
 
 .map-header {
