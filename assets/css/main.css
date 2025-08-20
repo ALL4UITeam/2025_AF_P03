@@ -582,6 +582,20 @@ em {
   background-color: rgb(23, 100, 220);
 }
 
+/* 파일 아이콘 추가 */
+.ico-file {
+  -webkit-mask-image: url("../images/ico_file.svg");
+  mask-image: url("../images/ico_file.svg");
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: #555;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
 .btn {
   display: inline-flex;
   border: 1px solid #1d1d1d;
@@ -3715,4 +3729,13 @@ select.select::after {
   background-repeat: no-repeat;
   background-position: right 0.8rem center;
   background-size: 1.6rem;
+}
+
+.islands-name {
+  background-color: #1764dc;
+  color: #fff;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  z-index: 100;
 }
