@@ -3732,10 +3732,13 @@ select.select::after {
 }
 
 .islands-name {
-  background-color: #1764dc;
-  color: #fff;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #333;
+  font-weight: 600;
   border-radius: 0.4rem;
-  font-size: 1.2rem;
-  padding: 0.6rem 1rem;
+  font-size: 1.4rem;
+  padding: 0.6rem 1.4rem;
   z-index: 100;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
