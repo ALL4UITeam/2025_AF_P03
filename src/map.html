@@ -14,8 +14,8 @@
     <script src="./lib/swiper/swiper-bundle.min.js"></script>
 </head>
 
-<body>
-    <div id="wrap" class="map-page view-mode">
+<body class="view-mode">
+    <div id="wrap" class="map-page">
         <div class="map-header">
             {{> header}}
         </div>
@@ -58,14 +58,14 @@
                 </div>
                 <div class="map-bottomcenter">
                     <div class="map-location-search">
-                        <button type="button" class="btn-search toggle-btn" title="지도에서 검색" aria-pressed="false">지도에서
-                            검색<i class="svg-icon ico-search"></i></button>
                         <select name="" id="" title="시도 선택">
                             <option value="">광역시도 전체</option>
                         </select>
                         <select name="" id="" title="시군구 선택">
                             <option value="">시군구 전체</option>
                         </select>
+                        <button type="button" class="btn-search toggle-btn" title="지도에서 검색" aria-pressed="false">지도에서
+                            검색<i class="svg-icon ico-search"></i></button>
                     </div>
                 </div>
 
@@ -144,6 +144,8 @@
         }
         // 닫기 버튼 이벤트
         closeBtn.addEventListener("click", closeSlidePopup);
+
+        openSlidePopup()
     </script>
 </body>
 </html>

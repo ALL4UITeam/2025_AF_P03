@@ -69,12 +69,12 @@
         height: 10rem;
         padding: 0 6rem;
         z-index: 2;
-        @media (max-width: 1200px) {
+        @media (max-width: 1340px) {
             padding: 0 clamp(2rem, 3.13vw, 6rem);
         }
         .logo{
-            width: 15rem;
-            height: 4.6rem;
+            width: 29.7rem;
+            height: 4.7rem;
             a{
                 display: block;
                 width: 100%;
@@ -98,7 +98,7 @@
                     color: #1D1D1D;
                     font-weight: 700;
                     padding: 0 clamp(20px, 2.6vw, 50px);
-                    font-size: 2.1rem;
+                    font-size: clamp(1.4rem, 1.5vw, 2.1rem);
                     height: 10rem;
                     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     &.current,
@@ -166,7 +166,7 @@
     }
 }
 .header-right{
-    @media (min-width: 1024px) and (max-width: 1200px) {
+    @media (min-width: 1024px) and (max-width: 1340px) {
         display: none;
     }
 }
@@ -225,7 +225,7 @@
             height: 7rem;
             padding: 0 2rem;
             .logo{
-                width: 12rem;
+                width: 17rem;
                 height: 3.6rem;
             }
             
@@ -272,7 +272,7 @@
                 > a{
                     flex-shrink: 0;
                     //padding: 1.5rem 2rem;
-                    width: clamp(140px, 20vw, 250px);
+                    width: clamp(140px, 29vw, 250px);
                     font-size: clamp(1.6rem, 2.5vw, 1.8rem);
                     white-space: nowrap;
                     color: #fff;

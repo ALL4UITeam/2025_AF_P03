@@ -1,18 +1,19 @@
   gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother);
 
-  ScrollSmoother.create({
+  const smoother = ScrollSmoother.create({
     wrapper: "#smoother-wrapper",
     content: "#smoother-content",
     smooth: 2,
-    speed: 1,
-    normalizeScroll: true,
-    ignoreMobileResize: true,
-    smoothTouch: 0.1,
     effects: true,
-    preventDefault: true,
-    normalizeScroll: { allowNestedScroll: true }
+    normalizeScroll: false,
+    preventDefault: false
   });
   
+  // 👇 레이아웃 변화 감지 끊기
+  smoother.refresh = () => {};   // 강제로 refresh 막기
+  ScrollTrigger.refresh = () => {}; // 튐 원천 차단
+  
+
 
     const nav = document.querySelector("#nav");
     const toggleBtn = document.querySelector(".mobile-btn-menu");
@@ -140,7 +141,5 @@
 
 
   window.addEventListener("resize", () => {
-    //ScrollSmoother.update();
-    //ScrollSmoother.refresh();
-    //ScrollTrigger.refresh();
+    
   });

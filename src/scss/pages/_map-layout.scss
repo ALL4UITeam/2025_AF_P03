@@ -119,7 +119,10 @@ height: 100%;
         background-position: right .8rem center;
         background-size: 1.6rem;
         padding: 0 1.6rem;
-        border-left: 1px solid #D9D9D9;
+        &:nth-child(2){
+            border-left: 1px solid #D9D9D9;
+            border-right: 1px solid #D9D9D9;
+        }
     }
     button{
         display: flex;
@@ -158,6 +161,7 @@ height: 100%;
         right: inherit;
         bottom: inherit;
         display: block;
+        
     }
 }
 .legal-disclaimer{

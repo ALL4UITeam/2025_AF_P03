@@ -25,6 +25,7 @@
             justify-content: flex-end;
             align-items: center;
             margin-bottom: .5rem;
+            position: relative;z-index: 2;
         }
     }
     .panel-title{
@@ -218,9 +219,10 @@
         border: 1px solid #D8D8D8;
         border-radius: 1rem;
         overflow: hidden;
+        cursor: pointer;
         img{
             display: block;
-            aspect-ratio: 1 / 1;
+            aspect-ratio: 1 / .78;
             object-fit: fill;
             object-position: center;
             width: 100%;
@@ -257,7 +259,7 @@
         .panel-close{
             position: absolute;
             top: 50%;
-            transform: translateY(-45%);
+            transform: translateY(0%);
         }
         .panel-back{
             left: 1rem;
@@ -311,6 +313,33 @@
         }
     }
 }
+.map-audio-item.no-image{
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .4rem;
+    &::before{
+        content: '';
+        display: block;
+        width: 5.6rem;
+        height: 5.6rem;
+        background: url('@/assets/images/map/no-image.png') no-repeat center center / contain;
+        border: 1px solid #eee;
+        border-radius: 50%;
+    }
+    &::after{
+        content:'이미지 준비중';
+        color: #717171;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+}
+.map-audio-item.video{
+    border: 0;
+    background: url('@/assets/images/map/icon_video.png') no-repeat center center / contain;
+}
 
 
 .map-input{
@@ -341,4 +370,31 @@
     padding: .6rem 1.4rem;
     z-index: 100;
     box-shadow: 0 0 1rem rgba(0,0,0,0.1);
+}
+
+/* 데이터 없음 */
+.nodata{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .7rem;
+    font-size: 1.5rem;
+    color: #8E8E8E;
+    padding: 2rem;
+    border: 1px solid #D8D8D8;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    background-color: #F8F8F8;
+    i{
+        width: 5.6rem;
+        height: 5.6rem;
+        background: url('@/assets/images/map/icon_warning_gray.png') no-repeat center center;
+        border-radius: 50%;
+    }
+    p{
+        font-size: 1.5rem;
+        color: #8E8E8E;
+        font-weight: 500;
+    }
 }
