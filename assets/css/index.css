@@ -1361,7 +1361,7 @@ body, html {
 
 .sublayout__header {
   position: relative;
-  height: 40rem;
+  height: 25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1370,6 +1370,11 @@ body, html {
   text-align: center;
   overflow: hidden;
   transform-origin: center;
+}
+@media screen and (max-width: 1024px) {
+  .sublayout__header {
+    height: 22rem;
+  }
 }
 .sublayout .image-background {
   position: absolute;
@@ -4564,9 +4569,17 @@ body {
   background-color: #fff;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.03);
 }
+.ofmonth-view-islands .swiper .swiper-slide {
+  text-align: center;
+}
 .ofmonth-view-islands .swiper .swiper-slide img {
   overflow: hidden;
   border-radius: 1.6rem;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
 }
 .ofmonth-view-islands .swiper .swiper-button-prev,
 .ofmonth-view-islands .swiper .swiper-button-next {

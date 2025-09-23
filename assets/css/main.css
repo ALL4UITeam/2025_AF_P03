@@ -2931,7 +2931,7 @@ body:has(.option-panel.show) .map-topright {
   }
   [data-option-panel=optionPanel2] {
     top: auto;
-    bottom: 0;
+    bottom: 5rem;
     height: auto;
   }
   [data-option-panel=optionPanel2] .ico-close2 {
@@ -3393,6 +3393,21 @@ select.select::after {
     padding: 1rem 5rem;
   }
 }
+.slide-popup-content .swiper-slide {
+  display: flex;
+  height: auto;
+}
+.slide-popup-content .swiper-slide::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.slide-popup-content .swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 .slide-popup-content .swiper-button-prev,
 .slide-popup-content .swiper-button-next {
   background: #fff;
@@ -3600,6 +3615,8 @@ select.select::after {
   justify-content: flex-end;
   align-items: center;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
 }
 .content-panel .panel-title {
   text-align: center;

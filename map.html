@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
-<body>
-    <div id="wrap" class="map-page view-mode">
+<body class="view-mode">
+    <div id="wrap" class="map-page">
         <div class="map-header">
             <header class="header">
                 <div class="header-container">
@@ -1274,7 +1274,7 @@
                         <div class="swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide"><img src="./assets/images/dummy3.png" alt=""></div>
-                                <div class="swiper-slide"><img src="./assets/images/dummy3.png" alt=""></div>
+                                <div class="swiper-slide"><img src="https://dummyimage.com/1000x320/000/fff" alt=""></div>
                                 <div class="swiper-slide"><img src="./assets/images/dummy3.png" alt=""></div>
                                 <div class="swiper-slide"><img src="./assets/images/dummy3.png" alt=""></div>
                             </div>
@@ -1344,6 +1344,8 @@
         }
         // 닫기 버튼 이벤트
         closeBtn.addEventListener("click", closeSlidePopup);
+
+        openSlidePopup()
     </script>
 </body>
 </html>
