@@ -317,6 +317,12 @@
                         </div>
                         <div class="map-audio-list">
                             <div class="map-audio-utils">
+            
+                                <div class="nodata">
+                                    <i class="svg-icon ico-nodata"></i>
+                                    <p>시청각 자료가 존재하지 않습니다.</p>
+                                </div>
+            
                                 <select name="audio-type" id="audio-type" title="시청각 자료 유형" class="map-input">
                                     <option value="">전체</option>
                                     <option value="">해도</option>
@@ -332,11 +338,11 @@
                                     <span>백서 PDF 다운</span>
                                 </button>
                             </div>
-                            <div class="map-audio-item">
-                                <img src="https://dummyimage.com/160x160/000/fff" alt="">
+                            <div class="map-audio-item no-image">
+                                
                             </div>
-                            <div class="map-audio-item">
-                                <img src="https://dummyimage.com/320x160/000/fff" alt="">
+                            <div class="map-audio-item video">
+                                <img src="./assets/images/video.png" alt="">
                             </div>
                             <div class="map-audio-item">
                                 <img src="https://dummyimage.com/160x320/000/fff" alt="">
@@ -449,14 +455,14 @@
                 </div>
                 <div class="map-bottomcenter">
                     <div class="map-location-search">
-                        <button type="button" class="btn-search toggle-btn" title="지도에서 검색" aria-pressed="false">지도에서
-                            검색<i class="svg-icon ico-search"></i></button>
                         <select name="" id="" title="시도 선택">
                             <option value="">광역시도 전체</option>
                         </select>
                         <select name="" id="" title="시군구 선택">
                             <option value="">시군구 전체</option>
                         </select>
+                        <button type="button" class="btn-search toggle-btn" title="지도에서 검색" aria-pressed="false">지도에서
+                            검색<i class="svg-icon ico-search"></i></button>
                     </div>
                 </div>
 
