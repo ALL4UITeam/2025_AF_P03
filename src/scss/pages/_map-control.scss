@@ -391,6 +391,7 @@ body:has(.option-panel.show){
     outline: none;
     transition: background 0.2s;
     &:focus { background: #e5eaf2; }
+    &.active .ico-arrow-down,
     &[aria-expanded="true"] .ico-arrow-down {
       transform: rotate(-180deg);
     }
@@ -408,7 +409,6 @@ body:has(.option-panel.show){
     height: 4rem;
     .switch-item{
       flex-shrink: 0;
-
     }
     > button{
       display: flex;
@@ -424,6 +424,9 @@ body:has(.option-panel.show){
       position: relative;
       gap:0 .8rem;
       height: 4rem;
+      &.not{
+        cursor: default;
+      }
     }
   }
   &__panel, &__panel2 {

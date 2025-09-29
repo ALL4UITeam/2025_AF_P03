@@ -406,31 +406,30 @@
       });
 
     // 2뎁스 아코디언
-    document
-      .querySelectorAll(".layer-accordion__title2")
-      .forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          const panel = document.getElementById(
-            btn.getAttribute("aria-controls")
-          );
-          const expanded = btn.getAttribute("aria-expanded") === "true";
-          btn.setAttribute("aria-expanded", !expanded);
-          if (panel) {
-            if (expanded) {
-              panel.classList.remove("show");
-            } else {
-              panel.classList.add("show");
-            }
-          }
-        });
+    document.querySelectorAll(".layer-accordion__title2").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const panel = document.getElementById(btn.getAttribute("data-controls-panel"));
+        const expanded = btn.classList.contains("active");
 
-        btn.addEventListener("keydown", function (e) {
-          if (e.key === " " || e.key === "Enter") {
-            e.preventDefault();
-            btn.click();
+        if (panel) {
+          if (expanded) {
+            btn.classList.remove("active");
+            panel.classList.remove("show");
+          } else {
+            btn.classList.add("active");
+            panel.classList.add("show");
           }
-        });
+        }
       });
+
+      btn.addEventListener("keydown", function (e) {
+        if (e.key === " " || e.key === "Enter") {
+          e.preventDefault();
+          btn.click();
+        }
+      });
+    });
+
   }
 
   /**

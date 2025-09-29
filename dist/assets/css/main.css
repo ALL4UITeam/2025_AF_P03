@@ -2975,7 +2975,7 @@ body:has(.option-panel.show) .map-topright {
 .layer-accordion__title:focus, .layer-accordion__title2:focus {
   background: #e5eaf2;
 }
-.layer-accordion__title[aria-expanded=true] .ico-arrow-down, .layer-accordion__title2[aria-expanded=true] .ico-arrow-down {
+.layer-accordion__title.active .ico-arrow-down, .layer-accordion__title[aria-expanded=true] .ico-arrow-down, .layer-accordion__title2.active .ico-arrow-down, .layer-accordion__title2[aria-expanded=true] .ico-arrow-down {
   transform: rotate(-180deg);
 }
 .layer-accordion__title[aria-expanded=true] {
@@ -3005,6 +3005,9 @@ body:has(.option-panel.show) .map-topright {
   position: relative;
   gap: 0 0.8rem;
   height: 4rem;
+}
+.layer-accordion__title2 > button.not {
+  cursor: default;
 }
 .layer-accordion__panel, .layer-accordion__panel2 {
   padding: 0 0.8rem 0.8rem;

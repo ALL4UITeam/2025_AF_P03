@@ -288,15 +288,14 @@
     });
     document.querySelectorAll(".layer-accordion__title2").forEach(function(btn) {
       btn.addEventListener("click", function() {
-        const panel = document.getElementById(
-          btn.getAttribute("aria-controls")
-        );
-        const expanded = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", !expanded);
+        const panel = document.getElementById(btn.getAttribute("data-controls-panel"));
+        const expanded = btn.classList.contains("active");
         if (panel) {
           if (expanded) {
+            btn.classList.remove("active");
             panel.classList.remove("show");
           } else {
+            btn.classList.add("active");
             panel.classList.add("show");
           }
         }
