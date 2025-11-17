@@ -444,6 +444,9 @@
     }
 }
 
+.content-panel{
+transition: all 0.3s;
+}
 .aside-fold{
     @media (min-width: 1025px) {
         .aside-panel{
@@ -452,7 +455,10 @@
             opacity: 0;
             overflow: hidden;
         }
-        .map-area{
+        
+        .content-panel{
+            left:3rem;
+            
         }
     }
     

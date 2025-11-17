@@ -85,9 +85,11 @@
 
             {{> map-slide-popup}}
 
-            <div class="islands-name" style="left: 50%;top: 50%;position: absolute;">
+            <!-- 25.11.17 추가 -->
+            {{> map-chart-popup}}
+            <!-- <div class="islands-name" style="left: 50%;top: 50%;position: absolute;">
                 <span>갑축암</span>
-            </div>
+            </div> -->
             <!-- mobile용 블랙 -->
             <div class="mobile-black-bg"></div>
         </main>
@@ -99,6 +101,15 @@
     </div>
 
     <script>
+
+        // 차트 팝업
+        const chartPopup = document.querySelector(".chart-popup");
+        const chartCloseBtn = document.querySelector(".chart-popup-close");
+
+        chartCloseBtn.addEventListener("click", () => {
+            chartPopup.style.display = "none";
+        });
+
         let swiper = null;
 
         const slidePopup = document.querySelector(".slide-popup");
@@ -111,9 +122,9 @@
         // 열기 함수
         function openSlidePopup() {
 
-        //if (slidePopup.style.display !== "none") return;
+        if (slidePopup.style.display !== "none") return;
 
-        slidePopup.style.display = "block";
+        //slidePopup.style.display = "block";
 
         swiper = new Swiper(".swiper", {
             slidesPerView: 1,

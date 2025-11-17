@@ -849,14 +849,14 @@ em {
   height: 0;
   opacity: 0.5;
   visibility: hidden;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media (max-width: 1024px) {
   .header-bg {
     display: none;
   }
 }
-.header:has(#nav:hover) .header-bg {
+.header:has(.gnb-lv1:hover) .header-bg {
   opacity: 1;
   visibility: visible;
   height: 31.8rem;
@@ -864,23 +864,28 @@ em {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 @media (min-width: 1025px) {
-  .header:has(#nav:hover) .gnb .gnb-lv1 .gnb-submenu {
+  .header:has(.gnb-lv1:hover) .gnb .gnb-lv1 .gnb-submenu {
     opacity: 1;
     visibility: visible;
+    height: 31.8rem;
+    padding-top: 4rem;
+    display: block;
   }
-  .header:has(#nav:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item {
+  .header:has(.gnb-lv1:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition-delay: 0.3s;
+    transition-delay: 0s;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  .header:has(#nav:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item:nth-child(1) {
+  .header:has(.gnb-lv1:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item:nth-child(1) {
     transition-delay: 0.1s;
   }
-  .header:has(#nav:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item:nth-child(2) {
+  .header:has(.gnb-lv1:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item:nth-child(2) {
     transition-delay: 0.2s;
   }
-  .header:has(#nav:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item:nth-child(3) {
+  .header:has(.gnb-lv1:hover) .gnb .gnb-lv1 .gnb-submenu .gnb-submenu-list .gnb-submenu-item:nth-child(3) {
     transition-delay: 0.3s;
   }
 }
@@ -937,6 +942,7 @@ em {
     color: #1764dc;
   }
   .header .gnb-submenu {
+    display: none;
     opacity: 0;
     visibility: hidden;
     position: absolute;
@@ -944,8 +950,8 @@ em {
     left: 0;
     width: 100%;
     z-index: 10;
-    height: 31.8rem;
-    padding-top: 4rem;
+    height: 0;
+    padding-top: 0;
   }
   .header .gnb-submenu .gnb-submenu-list {
     display: flex;
@@ -956,7 +962,7 @@ em {
     opacity: 0;
     transform: translateY(40px);
     visibility: hidden;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.1s;
     text-align: center;
   }
   .header .gnb-submenu .gnb-submenu-list .gnb-submenu-item a {
@@ -4882,7 +4888,7 @@ body {
   top: 50%;
   right: 3rem;
   transform: translateY(-50%);
-  background: url("../images/close2.png") no-repeat center center;
+  background: url("../images/close.png") no-repeat center center;
   border: none;
   width: 2rem;
   height: 2rem;

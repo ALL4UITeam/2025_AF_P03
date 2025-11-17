@@ -78,6 +78,9 @@ height: 100%;
     left: $gap;
     bottom: $gap;
     z-index: 10;
+    @media (max-width: 1390px) {
+        display: none;
+    }
 }
 .map-bottomcenter{
     position: absolute;
@@ -90,6 +93,9 @@ height: 100%;
         right: $gap;
         transform: translateX(0);
         bottom: 11.5rem;
+    }
+    @media (max-width: 1080px) {
+        display: none;
     }
 }
 

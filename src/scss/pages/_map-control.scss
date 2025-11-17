@@ -760,7 +760,7 @@ select.select{
     }
   }
 }
-
+.chart-popup,
 .slide-popup{
   display: none;
   position: absolute;
@@ -882,6 +882,51 @@ select.select{
   }
 }
 
+
+.chart-popup{
+  .chart-popup-content{
+    padding-left: 5rem;
+    padding-right: 5rem;
+    @media (max-width: 1024px) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.chart-navs{
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0,1fr));
+  border: 1px solid #D8D8D8;
+  button{
+      font-size: 1.4rem;
+      padding: 1.4rem 0;
+      transition: all .3s ease;
+      opacity: 1;
+      &:hover,
+      &:focus{
+        opacity: 0.5;
+      }
+      &:not(:last-child){
+          border-right: 1px solid #D8D8D8;
+      }
+      &.active{
+        color: #fff;
+        background-color: var(--color-primary);
+        font-weight: 700;
+        
+      }
+  }
+}
+.chart-area{
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #D8D8D8;
+  
+}
+
 .poi-popup{
   display: none;
   position: absolute;
@@ -919,7 +964,7 @@ select.select{
   @media screen and (max-width: 768px) {
     left: 0% !important;
     top: 0% !important;
-    z-index: 10000 !important;    
+    z-index: 10000 !important;
     width: 100% !important;
     height: 100% !important;
   }
