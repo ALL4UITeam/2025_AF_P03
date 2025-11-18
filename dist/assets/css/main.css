@@ -2017,7 +2017,7 @@ body, html {
   margin: 0;
 }
 .law-info-header .law-info-close {
-  background: url("../images/close2.png") no-repeat center center;
+  background: url("../images/close.png") no-repeat center center;
   width: 1.6rem;
   height: 1.6rem;
   font-size: 0;
@@ -3553,16 +3553,23 @@ select.select::after {
   transition: all 0.3s ease;
   opacity: 1;
 }
-.chart-navs button:hover, .chart-navs button:focus {
-  opacity: 0.5;
-}
 .chart-navs button:not(:last-child) {
   border-right: 1px solid #D8D8D8;
 }
+.chart-navs button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  color: #8e8e8e;
+  background-color: rgba(85, 85, 85, 0.2);
+}
+.chart-navs button:hover:not(:disabled), .chart-navs button:focus:not(:disabled) {
+  background-color: rgba(54, 88, 211, 0.9);
+  color: #fff !important;
+}
 .chart-navs button.active {
   color: #fff;
-  background-color: var(--color-primary);
   font-weight: 700;
+  background: linear-gradient(to right, #3658D3, #17A595);
 }
 
 .chart-area {

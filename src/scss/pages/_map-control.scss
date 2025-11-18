@@ -904,17 +904,26 @@ select.select{
       padding: 1.4rem 0;
       transition: all .3s ease;
       opacity: 1;
-      &:hover,
-      &:focus{
-        opacity: 0.5;
-      }
       &:not(:last-child){
           border-right: 1px solid #D8D8D8;
       }
+      &:disabled{
+        opacity: 0.6;
+        cursor: not-allowed;
+        color: #8e8e8e;
+        background-color: rgba(85, 85, 85, 0.2);
+      }
+      &:hover,
+      &:focus{
+        &:not(:disabled){
+          background-color: rgba(#3658D3,0.9);
+          color: #fff !important;
+        }
+      }
       &.active{
         color: #fff;
-        background-color: var(--color-primary);
         font-weight: 700;
+        background:linear-gradient(to right, #3658D3, #17A595)
         
       }
   }
