@@ -115,7 +115,7 @@
 }
 
 
-@for $i from 1 through 4 {
+@for $i from 1 through 5 {
     .ico-pin-#{$i}{
         background-image: url('@/assets/images/map/ico-pin-#{$i}.png');
         width: 1.8rem;
